@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task manager App</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous"
+    />
+</head>
+<body>
+    <header class="header shadow bg-success">
+        <div class="container">
+            <div class="nav p-3 bg-success d-flex justify-content-between">
+                <h2>Task manager app</h2>
+                <div class="login-box d-flex gap-2 align-items-center">
+                    <p class="bg-warning rounded-pill p-2 mt-2" id="username"></p>
+                </div>
+                <button class="btn btn-danger" id="logout">chiqish</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="main">
+            <div class="container mt-5">
+                <div class="row gap-9">
+                    <div class="col-md-4 p-3 shadow bg-light">
+                        <form id="send">
+                            <label for="lesson" class="w-100 my-2">
+                                <span>lesson title</span>
+                                <input
+                                type="text"
+                                id="lesson"
+                                class="form-control p-3 w-100"
+                                />
+                            </label>
+                            <label for="time" class="w-100 my-2">
+                                <span>lesson runtime</span>
+                                <input
+                                type="text"
+                                id="runtime"
+                                class="form-control p-3 w-100"
+                                />
+                            </label>
+                            <button type="submit" class="btn btn-success w-100 p-3 my-3" >
+                                Add
+                            </button>
+                        </form>
+                    </div>
+                    <div class="col-md-8 shadow bg-light">
+                        <table
+                        class="table table-striped table-hover table-bordered table-responsive"
+                        >
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>lesson title</th>
+                                <th>Runtime</th>
+                                <th>edit</th>
+                                <th>delete</th>
+                            </tr>
+                        </thead>
+                        <tbody id="data">
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="editsend">
+                        <label for="lesson" class="w-100 my-2">
+                            <span>lesson title</span>
+                            <input
+                            type="text"
+                            id="editlesson"
+                            class="form-control p-3 w-100"
+                            />
+                        </label>
+                        <label for="time" class="w-100 my-2">
+                            <span>lesson runtime</span>
+                            <input
+                            type="text"
+                            id="edittime"
+                            class="form-control p-3 w-100"
+                            />
+                        </label>
+                        <button type="submit" class="btn btn-success w-100 p-3 my-3" >
+                            Add
+                        </button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+</main>
+</body>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<script src="./script/utils.js"></script>
+<script src="./index.js"></script>
+</html>
